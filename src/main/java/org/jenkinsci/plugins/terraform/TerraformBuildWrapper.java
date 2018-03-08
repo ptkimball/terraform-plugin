@@ -234,6 +234,7 @@ public class TerraformBuildWrapper extends BuildWrapper {
 
         args.add("apply");
         args.add("-input=false");
+        args.add("--auto-approve");
         args.add("-state="+stateFile.getRemote());
 
         if (!isNullOrEmpty(getVariables())) {
